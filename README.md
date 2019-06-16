@@ -1,1 +1,1 @@
-# Ozero
+# O(zero)
