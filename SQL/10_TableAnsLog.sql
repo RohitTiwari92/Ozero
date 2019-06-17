@@ -4,7 +4,7 @@ CREATE TABLE AnsLog (
    AnsLogID int not null primary key,
    EventID int FOREIGN KEY REFERENCES Event(EventID),
    QuestionID int FOREIGN KEY REFERENCES TableQuestions(QuestionID),
-   EventUsersID int FOREIGN KEY REFERENCES TableEventUsers(EventUsersID),
+   EventUsersID int FOREIGN KEY REFERENCES TableEventUsers(EventUserID),
    Ans varchar(MAX),
    AnsStatus bit,
    AttemptCount int
