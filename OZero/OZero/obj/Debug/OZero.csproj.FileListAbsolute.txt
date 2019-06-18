@@ -124,3 +124,5 @@ E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.csproj.CoreCompileInputs.cache
 E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.csproj.CopyComplete
 E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.dll
 E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.pdb
+E:\devon\Ozero\Ozero\OZero\OZero\bin\Dapper.dll
+E:\devon\Ozero\Ozero\OZero\OZero\bin\Dapper.xml

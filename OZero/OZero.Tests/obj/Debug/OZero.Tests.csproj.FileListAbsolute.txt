@@ -57,3 +57,5 @@ E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.csproj.CoreCompileI
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.csproj.CopyComplete
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.dll
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.pdb
+E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\Dapper.dll
+E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\Dapper.xml
