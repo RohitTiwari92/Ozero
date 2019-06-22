@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,17 +10,26 @@ namespace OZero.QuizMarking
 {
     public class GetMarkesForUser
     {
-        public GetMarkesForUser()
+        ILog _log;
+        public GetMarkesForUser(ILog log)
         {
-
+            _log = log;
         }
         public decimal GetMarks(int Eventid, int EventUserID)
         {
-            string query = "select sum(Marks) from anslog where and EventUsersID = " + EventUserID + " and eventid =" + Eventid;
-            using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
+            try
             {
-                decimal marks = connection.Query<decimal>(query).FirstOrDefault();
-                return marks;
+                string query = "select sum(Marks) from anslog where and EventUsersID = " + EventUserID + " and eventid =" + Eventid;
+                using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
+                {
+                    decimal marks = connection.Query<decimal>(query).FirstOrDefault();
+                    return marks;
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error("exception occur while getting the marks for user " + ex.Message + " /n inner ex: " + ex.InnerException.Message, ex);
+                throw ex;
             }
         }
     }

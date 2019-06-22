@@ -59,3 +59,5 @@ E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.dll
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\obj\Debug\OZero.Tests.pdb
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\Dapper.dll
 E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\Dapper.xml
+E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\log4net.dll
+E:\devon\Ozero\Ozero\OZero\OZero.Tests\bin\Debug\log4net.xml

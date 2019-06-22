@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,16 +10,25 @@ namespace OZero.Answer
 {
     public class SaveAnswer
     {
-        public SaveAnswer()
+        ILog _log;
+        public SaveAnswer(ILog log)
         {
-
+            _log = log;
         }
         public void save(int eid,int qid,int euid,string ans)
         {
-            string query = Getquery(qid, euid, ans);
-            using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
+            try
             {
-                var affrows = connection.Execute(query);
+                string query = Getquery(qid, euid, ans);
+                using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
+                {
+                    var affrows = connection.Execute(query);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error("exception occur while saving the ans " + ex.Message + " /n inner ex: " + ex.InnerException.Message, ex);
+                throw ex;
             }
         }
 

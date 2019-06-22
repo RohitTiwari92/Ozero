@@ -126,3 +126,5 @@ E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.dll
 E:\devon\Ozero\Ozero\OZero\OZero\obj\Debug\OZero.pdb
 E:\devon\Ozero\Ozero\OZero\OZero\bin\Dapper.dll
 E:\devon\Ozero\Ozero\OZero\OZero\bin\Dapper.xml
+E:\devon\Ozero\Ozero\OZero\OZero\bin\log4net.dll
+E:\devon\Ozero\Ozero\OZero\OZero\bin\log4net.xml
