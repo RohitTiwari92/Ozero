@@ -1,11 +1,12 @@
 IF OBJECT_ID('dbo.AnsLog', 'U') IS NOT NULL 
   DROP TABLE dbo.AnsLog; 
 CREATE TABLE AnsLog (
-   AnsLogID int not null primary key,
+   AnsLogID int not null  IDENTITY(1,1)  primary key,
    EventID int FOREIGN KEY REFERENCES Event(EventID),
    QuestionID int FOREIGN KEY REFERENCES TableQuestions(QuestionID),
    EventUsersID int FOREIGN KEY REFERENCES TableEventUsers(EventUserID),
    Ans varchar(MAX),
    AnsStatus bit,
-   AttemptCount int
+   AttemptCount int,
+   Marks decimal
 );

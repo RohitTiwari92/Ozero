@@ -14,12 +14,13 @@ namespace OZero.QuizMarking
 
         }
 
-        public float GetMarks(int questionid, string ans,bool IsCorrect)
+        public decimal GetMarks(int questionid, int EventUserID)
         {
-            string query = "";
+            string query = "select sum(Marks) from anslog where QuestionID = "+ questionid + " and EventUsersID = "+ EventUserID;
             using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
             {
-                return 0;
+                decimal marks = connection.Query<decimal>(query).FirstOrDefault();
+                return marks;
             }
         }
     }
