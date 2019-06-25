@@ -15,11 +15,11 @@ namespace OZero.QuizMarking
         {
             _log = log;
         }
-        public decimal GetMarks(int Eventid, int EventUserID)
+        public decimal GetMarks(int Eventid, int UserID)
         {
             try
             {
-                string query = "select sum(Marks) from anslog where and EventUsersID = " + EventUserID + " and eventid =" + Eventid;
+                string query = "select sum(Marks) from anslog where and UsersID = " + UserID + " and eventid =" + Eventid;
                 using (var connection = new SqlConnection(HelperClasses.ConnectionHelper.ConnectionString()))
                 {
                     decimal marks = connection.Query<decimal>(query).FirstOrDefault();
